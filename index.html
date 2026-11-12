@@ -278,6 +278,8 @@
   .badge-issue { background: #fde8df; color: #993c1d; }
   .badge-pattern { background: #fdf3e0; color: #7a4e0d; }
   .badge-good { background: #e3f2e4; color: #2e6b34; }
+  .td-key { display: flex; flex-direction: column; gap: 0.4rem; font-size: 12px; color: var(--muted); }
+  .td-key .badge { margin-left: 0; margin-right: 6px; }
 
   /* SKILLS */
   .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
@@ -346,7 +348,7 @@
     .projects-grid { grid-template-columns: 1fr; }
     .project-card.featured { grid-column: 1; }
 
-    .teardown-header { flex-direction: column; gap: 0.75rem; }
+    .teardown-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
     .td-tabs { overflow-x: auto; }
     .td-panel { padding: 1.5rem 1.25rem; }
     .finding { grid-template-columns: 36px 1fr; }
@@ -392,7 +394,7 @@
   <div class="hero-left">
     <h1 class="fade-up-2">Research-driven.<br>Business-minded.<br><em>Product-curious.</em></h1>
     <p class="hero-desc fade-up-3">
-      Business Management and Law graduate applying analytical thinking, consumer research, and evidence-based problem solving to UX Research, Product Management, and Business Analysis.
+      Business Management and Law graduate applying analytical thinking, consumer research, and evidence-based problem solving to Business Insights, UX Research, Product Management and Business Analysis.
     </p>
     <div class="hero-ctas fade-up-4">
       <a href="#teardown" class="btn-dark">View Shein Mini UX Teardown</a>
@@ -401,9 +403,9 @@
   </div>
   <div class="hero-right fade-up-3">
     <div class="stat-card">
-      <div class="stat-num">3</div>
+      <div class="stat-num">4</div>
       <div class="stat-label">Target roles</div>
-      <div class="stat-desc">UXR · PM · BA</div>
+      <div class="stat-desc">Insights · UXR · PM · BA</div>
     </div>
     <div class="stat-card">
       <div class="stat-num">2:1</div>
@@ -429,7 +431,7 @@
         My route into product thinking came through <strong>evidence, analysis and problem solving</strong> rather than design.
         Throughout my degree I applied academic research methods and established frameworks to analyse business processes,
         consumer behaviour, supply chains, organisational strategy and ethics. That kind of structured, critical thinking
-        sits at the foundation of UX research, product management and business analysis.
+        sits at the foundation of business insights, UX research, product management and business analysis.
       </p>
       <p>
         The <strong>SITE Oldham project</strong> is a strong example of that in practice. I spent months investigating
@@ -491,7 +493,10 @@
         <h3>Shein iOS mobile app, 2026</h3>
         <p>Walked through as a first-time user across onboarding, browsing and checkout</p>
       </div>
-
+      <div class="td-key">
+        <span><span class="badge badge-good">Good</span> Works well for the consumer</span>
+        <span><span class="badge badge-issue">Pain point</span> Creates friction or frustration</span>
+      </div>
     </div>
     <div class="td-tabs">
       <div class="td-tab active" onclick="showTab('onb',this)">Onboarding</div>
@@ -528,7 +533,7 @@
       <div class="finding">
         <div class="finding-num">03</div>
         <div>
-          <div class="finding-title">Notification request and coupon pop-up appear before any browsing</div>
+          <div class="finding-title">Notification request and coupon pop-up appear before any browsing <span class="badge badge-issue">Pain point</span></div>
           <div class="finding-body">
             Almost immediately after opening the app, a push notification permission request and a coupon overlay appear. No products have been viewed at this point, so neither feels relevant to where the consumer actually is.
             <br><br>
@@ -554,11 +559,11 @@
       <div class="finding">
         <div class="finding-num">02</div>
         <div>
-          <div class="finding-title">Inconsistent sizing information</div>
+          <div class="finding-title">Inconsistent sizing information <span class="badge badge-issue">Pain point</span></div>
           <div class="finding-body">
-            Some products include detailed measurements; others only list generic size labels with no additional guidance. For consumers buying without being able to try items on, this inconsistency creates real uncertainty and is likely a contributing factor to high return rates.
+            Some products include detailed measurements; others only list generic size labels with no additional guidance. For consumers buying without being able to try items on, this inconsistency creates real uncertainty and may contribute to items being returned because they don't fit as expected.
             <br><br>
-            <strong>Business rationale:</strong> Shein works with a very large number of independent suppliers, so consistent product information across all of them is an operational challenge rather than a deliberate design choice.
+            <strong>Business rationale:</strong> Shein's products appear to come from many different suppliers, so keeping product information consistent across all of them is likely an operational challenge rather than a deliberate design choice.
             <br><br>
             <strong>What I would change:</strong> Introduce minimum sizing requirements at the point of product submission and increase the visibility of consumer reviews that reference fit.
           </div>
@@ -567,7 +572,7 @@
       <div class="finding">
         <div class="finding-num">03</div>
         <div>
-          <div class="finding-title">Coupon prompts reappear throughout browsing</div>
+          <div class="finding-title">Coupon prompts reappear throughout browsing <span class="badge badge-issue">Pain point</span></div>
           <div class="finding-body">
             Coupon overlays resurfaced multiple times during browsing, despite having already been dismissed at the onboarding stage. The repetition interrupts the browsing experience without adding anything new.
             <br><br>
@@ -582,20 +587,20 @@
       <div class="finding">
         <div class="finding-num">01</div>
         <div>
-          <div class="finding-title">Heavy use of urgency cues throughout the cart</div>
+          <div class="finding-title">Heavy use of urgency cues throughout the cart <span class="badge badge-issue">Pain point</span></div>
           <div class="finding-body">
             The cart features a high volume of animated prompts: product images moving side to side, stock warnings such as "8 left" cycling every few seconds, prices highlighted in red, and repeated low stock alerts. The overall effect is a checkout environment that feels pressuring rather than helpful to a consumer trying to make a considered decision.
             <br><br>
             <strong>Business rationale:</strong> Urgency-based prompts are a well-known tactic for increasing the proportion of consumers who complete a purchase. At Shein's scale, even a small uplift across a large number of sessions carries real commercial value.
             <br><br>
-            <strong>The wider concern:</strong> Consumers who feel rushed into purchases they were unsure about are more likely to return items and less likely to trust the platform over time.
+            <strong>The wider concern:</strong> Consumers who feel rushed into purchases they were unsure about may be more likely to return items and less likely to trust the platform over time.
           </div>
         </div>
       </div>
       <div class="finding">
         <div class="finding-num">02</div>
         <div>
-          <div class="finding-title">Contact details required before proceeding to checkout</div>
+          <div class="finding-title">Contact details required before proceeding to checkout <span class="badge badge-issue">Pain point</span></div>
           <div class="finding-body">
             Completing a purchase requires providing an email address or phone number. By this point time has been spent selecting items, making it more likely a consumer will comply, but it is still a barrier that was not flagged earlier in the journey.
             <br><br>
@@ -606,7 +611,7 @@
       <div class="finding">
         <div class="finding-num">03</div>
         <div>
-          <div class="finding-title">Delivery costs only visible late in the checkout process</div>
+          <div class="finding-title">Delivery costs only visible late in the checkout process <span class="badge badge-issue">Pain point</span></div>
           <div class="finding-body">
             Delivery fees are not shown in the cart. They only appear when selecting a delivery option, several steps into checkout. By that point the consumer has already invested time and effort, making it harder to step back when the total is higher than expected.
             <br><br>
@@ -617,7 +622,7 @@
       <div class="finding">
         <div class="finding-num">04</div>
         <div>
-          <div class="finding-title">Product recommendations placed next to the checkout button</div>
+          <div class="finding-title">Product recommendations placed next to the checkout button <span class="badge badge-issue">Pain point</span></div>
           <div class="finding-body">
             Additional product suggestions appear at the bottom of the cart, close to the checkout button. At the point where a consumer has already decided what they want, introducing new options creates distraction rather than value.
             <br><br>
@@ -847,7 +852,7 @@
 
 <footer>
   <span class="footer-name">Nevaeh</span>
-  <span>UX Research · Product Management · Business Analysis</span>
+  <span>Business Insights · Data · UX Research · Product Management · Business Analysis</span>
 </footer>
 
 <script>
